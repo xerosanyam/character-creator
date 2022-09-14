@@ -1,13 +1,16 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  position: relative;
 }
 
 .maxWidthWrapper {
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  max-width: 65%;
 }
 
 .title {
@@ -24,7 +27,36 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  min-height: 500px;
+  top: 160px;
+  right: 200px;
 }
 
 .controlColumn {
+  max-width: 50%;
+}
+
+.perspective {
+  background-color: hsl(195deg, 20%, 86%);
+  height: 60%;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+@media (max-width: 800px) {
+  .characterWrapper {
+    top: 160px;
+    left: 20px;
+    /* min-height: 80vh; */
+    /* display: none; */
+  }
+  .controlColumn {
+    position: fixed;
+    max-width: 100%;
+    display: flex;
+    overflow: auto;
+    bottom: 30px;
+  }
 }
